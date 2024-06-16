@@ -1,4 +1,4 @@
-# [My portfolio](http://github.com/deborahhalonen/portfolio)
+# [My portfolio](https://deborahhalonen.github.io/portfolio/)
 
 ### How to run
 
