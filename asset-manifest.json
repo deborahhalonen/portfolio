@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/deborahhalonen/portfolio/static/css/main.972fd48f.css",
+    "main.js": "/deborahhalonen/portfolio/static/js/main.0e944e31.js",
+    "static/media/chart.png": "/deborahhalonen/portfolio/static/media/chart.a7d5c9a7c1b9959a951a.png",
+    "static/media/kallan.png": "/deborahhalonen/portfolio/static/media/kallan.27bfe5c4d0e3fdb7aed7.png",
+    "static/media/Futura Heavy.ttf": "/deborahhalonen/portfolio/static/media/Futura Heavy.af72c25a6945b0f48abb.ttf",
+    "static/media/Futura Medium.ttf": "/deborahhalonen/portfolio/static/media/Futura Medium.4e762c29ef7b44ca51cb.ttf",
+    "static/media/Futura Book.ttf": "/deborahhalonen/portfolio/static/media/Futura Book.ed19af444f0976dbaf41.ttf",
+    "index.html": "/deborahhalonen/portfolio/index.html",
+    "main.972fd48f.css.map": "/deborahhalonen/portfolio/static/css/main.972fd48f.css.map",
+    "main.0e944e31.js.map": "/deborahhalonen/portfolio/static/js/main.0e944e31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.972fd48f.css",
+    "static/js/main.0e944e31.js"
+  ]
+}
