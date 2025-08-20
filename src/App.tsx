@@ -1,5 +1,5 @@
-import React, { useState, useEffect, forwardRef, RefObject, createRef, useRef } from 'react'
-import TRUNK from 'vanta/dist/vanta.trunk.min'
+import React, { forwardRef, RefObject, createRef } from 'react'
+import Background from './Background'
 import p5 from 'p5'
 import './App.scss'
 import chart from './images/chart.png'
@@ -7,7 +7,7 @@ import kallan from './images/kallan.png'
 
 const scrollToRef = (ref: RefObject<any>) => window.scrollTo(0, ref.current.offsetTop)   
 
-function App() {
+const App = () => {
 
   const aboutMeRef = createRef<HTMLDivElement>()
   const scrollToExperience: () => void = () => scrollToRef(aboutMeRef)
@@ -22,62 +22,36 @@ function App() {
   )
 }
 
-function Hero({ onChevronClicked }: { onChevronClicked: () => void }) {
+const Hero = ({ onChevronClicked }: { onChevronClicked: () => void }) => {
 
   return (
     <section className="hero is-fullheight">
-      <div className="hero-body">
-        <Vanta />
+      <div className="hero-body columns">
+        <Background/>
         <div className="hero-bg-grid"/>
         <div className="hero-bg-gradient"/>
         <Intro onChevronClicked={onChevronClicked}/>
+        <Chevron clickListener={onChevronClicked} />
       </div>
     </section>
   )
 }
 
-function Vanta() {
-
-  const [vantaEffect, setVantaEffect] = useState<any>(null)
-  const vantaRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      try {
-        setVantaEffect(TRUNK({
-          el: vantaRef.current,
-          p5: p5,
-          backgroundColor: 0xffffff,
-          color: 0x080808,
-          spacing: 2,
-          chaos: 2
-        }))
-      } catch (e) {
-        console.error("Failed to create vanta effect: ", e)
-      }
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
+const Intro = ({ onChevronClicked }: { onChevronClicked: () => void }) => {
   return (
-    <div id="vanta-container" ref={vantaRef}/>
-  )
-}
-
-function Intro({ onChevronClicked }: { onChevronClicked: () => void }) {
-  return (
-    <div className="container mt-8 mb-auto">
-      <h1 className="title is-3 is-size-4-touch mb-2 fadein-1">Deborah Halonen</h1>
-      <h2 className="title is-4 is-size-4-touch fadein-2">Architect</h2>
-      <p className="mb-2 fadein-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p className="mb-4 fadein-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <Chevron clickListener={onChevronClicked} />
+    <div className="columns">
+      <div className="column is-1 is-tablet"></div>
+      <div className="column is-4 mt-8 mb-auto">
+        <h1 className="title is-3 is-size-4-touch mb-2 fadein-1">Deborah Halonen</h1>
+        <h2 className="title is-4 is-size-4-touch fadein-2">Architect</h2>
+        <p className="mb-2 fadein-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className="mb-4 fadein-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
     </div>
   )
 }
 
-function Chevron({ clickListener }: { clickListener: () => void }) {
+const Chevron = ({ clickListener }: { clickListener: () => void }) => {
   return (
     <div className="is-hidden-touch chevron-down fadein-5">
       <button onClick={clickListener}>
@@ -89,7 +63,7 @@ function Chevron({ clickListener }: { clickListener: () => void }) {
   )
 }
 
-function Footer() {
+const Footer = () => {
   return (
       <div className="container is-fluid mb-5">
         <div className="columns is-mobile is-centered">
@@ -198,7 +172,7 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
   )
 })
 
-function ProjectItem(props: ProjectItemProps) {
+const ProjectItem = (props: ProjectItemProps) => {
 
   return (
     <div className="columns mt-2 mb-6 is-6 is-variable">

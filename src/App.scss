@@ -1,29 +1,22 @@
 @import './base.scss';
 
-#vanta-container {
+#p5-canvas {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
 
     @include mobile {
         visibility: hidden;
     }
 }
 
-.vanta-canvas {
-    transform: translateY(62%) scalex(6);
-    clip-path: inset(0 0 63% 0);
-}
-
 .hero-bg-gradient {
 
     @include desktop {
-        background-size: auto 30%;
+        background-size: auto 5%;
     }
 
-    background: linear-gradient(180deg, transparentize($background, 1), transparentize($background, 0.9), transparentize($background, 0.2), $background);
+    background: linear-gradient(180deg, transparentize($background, 0.8), transparentize($background, 0.2), transparentize($background, 0.01), transparentize($background, 0.001));
     background-repeat: no-repeat;
     background-position-y: 101%;
     background-size: auto 20%;
@@ -54,6 +47,7 @@
 
     position: absolute;
     left: calc(50% - #{$padding + 12px});
+    bottom: 10px;
 
     button { 
         padding: $padding;
