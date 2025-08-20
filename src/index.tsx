@@ -4,8 +4,7 @@ import './base.scss';
 import './text.scss';
 import './fonts.css';
 import App from './App';
-import DocumentView from './Document';
-import ErrorPage from "./Error";
+import GrainwaveApp from './GrainwaveApp';
 import * as serviceWorker from './serviceWorker';
 import {
   createBrowserRouter,
@@ -15,14 +14,12 @@ import {
 const router = createBrowserRouter([
   {
     path: "/portfolio",
-    element: <App />,
-    errorElement: <ErrorPage />,
+    element: <App />
   },
   {
-    path: "/files/:file",
-    element: <DocumentView />,
-    errorElement: <ErrorPage />,
-  },
+    path: "/grainwave",
+    element: <GrainwaveApp />
+  }
 ]);
 
 ReactDOM.render(
