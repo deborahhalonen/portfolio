@@ -1,4 +1,4 @@
-import React, { forwardRef, RefObject, createRef } from 'react'
+import React from 'react'
 import Background from './Background'
 import p5 from 'p5'
 import './App.scss'
@@ -20,30 +20,30 @@ const Hero = () => {
   return (
     <div className="hero is-fullheight section">
       <div className="level">
-        <div className="level-left">
+        <div className="level-left has-text-centered-touch">
           <p className="is-size-6 has-text-weight-semibold">Deborah Halonen</p>
         </div>
-        <div className="level-right">
+        <div className="level-right has-text-centered-touch">
           <p className="is-size-6 has-text-weight-semibold">architect, designer and builder</p>
         </div>
       </div>
 
-      <div className="has-text-centered">
-        <h1 className="title is-2 is-family-secondary has-text-weight-light">
-          Grain<span className="is-italic">wave</span>
+      <div>
+        <h1 className="title is-2 has-text-centered is-family-secondary has-text-weight-light">
+          Grain<wbr/><span className="is-italic">wave</span>
         </h1>
       </div>
 
-      <div className="level mt-6">
-        <div className="level-left mr-5">
-          <p className="is-size-7 has-text-left has-text-weight-semibold">
+      <div className="columns mt-6">
+        <div className="column is-4">
+          <p className="is-size-7 has-text-left has-text-centered-touch has-text-weight-semibold">
             cnc technology <br /> random parameters
           </p>
         </div>
-        <div className="level-item has-text-centered">
+        <div className="column is-4 has-text-centered">
           <p className="is-size-7 has-text-weight-semibold">Stockholm <br /> Sweden</p>
         </div>
-        <div className="level-right has-text-right">
+        <div className="column is-4 has-text-right has-text-centered-touch">
           <p className="is-size-7 has-text-weight-semibold">
             Master of Architecture - MArch <br /> KTH
           </p>
@@ -106,7 +106,7 @@ const Project = () => {
         <div className="columns is-centered">
           <div className="column is-narrow">
             <button className="mt-2">
-              <p className="is-size-7"><a href={"https://deborahhalonen.github.io/public/files/Grainwave_ritning.pdf"}>{"Grainwave blueprints"}</a></p>
+              <p className="is-size-7"><a href={"https://deborahhalonen.github.io/portfolio/files/Grainwave_ritning.pdf"}>{"Grainwave blueprints"}</a></p>
             </button>
           </div>
         </div>

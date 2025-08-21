@@ -7,23 +7,18 @@ import App from './App';
 import GrainwaveApp from './GrainwaveApp';
 import * as serviceWorker from './serviceWorker';
 import {
-  createBrowserRouter,
-  RouterProvider,
+  HashRouter,
+  Routes,
+  Route,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/portfolio",
-    element: <App />
-  },
-  {
-    path: "/grainwave",
-    element: <GrainwaveApp />
-  }
-]);
-
 ReactDOM.render(
-  <RouterProvider router={router} />,
+  <HashRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/grainwave" element={<GrainwaveApp />} />
+    </Routes>
+  </HashRouter>,
   document.getElementById("root")
 );
 
