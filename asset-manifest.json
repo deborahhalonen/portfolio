@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.554202da.css",
+    "main.js": "/portfolio/static/js/main.b76a6db4.js",
+    "static/media/Grainwave_ritning_1.jpg": "/portfolio/static/media/Grainwave_ritning_1.30629c714678ea684ab7.jpg",
+    "static/media/Grainwave_foto_2.jpg": "/portfolio/static/media/Grainwave_foto_2.9d5592e9d83e4c5b5ab4.jpg",
+    "static/media/Grainwave_foto_3.jpg": "/portfolio/static/media/Grainwave_foto_3.e0415f766d6911e782b3.jpg",
+    "static/media/Grainwave_foto_1_.jpg": "/portfolio/static/media/Grainwave_foto_1_.0535dbaf4d610844bcf6.jpg",
+    "static/media/chart.png": "/portfolio/static/media/chart.a7d5c9a7c1b9959a951a.png",
+    "static/media/kallan.png": "/portfolio/static/media/kallan.27bfe5c4d0e3fdb7aed7.png",
+    "static/media/Futura Heavy.ttf": "/portfolio/static/media/Futura Heavy.af72c25a6945b0f48abb.ttf",
+    "static/media/Futura Medium.ttf": "/portfolio/static/media/Futura Medium.4e762c29ef7b44ca51cb.ttf",
+    "static/media/Futura Book.ttf": "/portfolio/static/media/Futura Book.ed19af444f0976dbaf41.ttf",
+    "index.html": "/portfolio/index.html",
+    "main.554202da.css.map": "/portfolio/static/css/main.554202da.css.map",
+    "main.b76a6db4.js.map": "/portfolio/static/js/main.b76a6db4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.554202da.css",
+    "static/js/main.b76a6db4.js"
+  ]
+}
