@@ -5,6 +5,8 @@ import './App.scss'
 import grainwave1 from './images/Grainwave_foto_1_.jpg'
 import grainwave2 from './images/Grainwave_foto_2.jpg'
 import grainwave3 from './images/Grainwave_foto_3.jpg'
+import grainwave4 from './images/Grainwave_ritning_1.jpg'
+
 
 const GrainwaveApp = () => {
 
@@ -101,14 +103,12 @@ const Project = () => {
                 <ProjectItem {...item} key={"p" + i}/>
             )
           })
-        }
+        }        
 
         <div className="columns is-centered">
-          <div className="column is-narrow">
-            <button className="mt-2">
-              <p className="is-size-7"><a href={"https://deborahhalonen.github.io/portfolio/files/Grainwave_ritning.pdf"}>{"Grainwave blueprints"}</a></p>
-            </button>
-          </div>
+          <a href={grainwave4} target="_blank" rel="noopener noreferrer">
+            <img src={grainwave4} className="portfolio-image" alt="Grainwave ritning" />
+          </a>
         </div>
 
       </div>
